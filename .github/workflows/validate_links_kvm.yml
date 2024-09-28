@@ -1,17 +1,14 @@
-name: "Validate links"
+name: "Validate links kvm"
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron:  '0 0 * * *'
-
 env:
   FILENAME: README.md
 
 jobs:
   validate_links:
     name: 'Check all links are working'
-    runs-on: ubuntu-latest
+    runs-on: kvm
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
