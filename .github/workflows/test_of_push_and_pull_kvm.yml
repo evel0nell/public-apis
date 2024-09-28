@@ -1,6 +1,6 @@
 name: "Tests of push & pull kvm"
 on:
-  workflow_dispatch
+  workflow_dispatch:
 
 env:
   FILENAME: README.md
