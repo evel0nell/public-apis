@@ -1,15 +1,12 @@
-name: "Tests of validate package"
+name: "Tests of validate package kvm"
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  workflow_dispatch
 
 jobs:
   unittest:
     name: 'Run tests of validate package'
-    runs-on: ubuntu-latest
+    runs-on:  kvm
 
     steps:
     - name: Checkout repository
