@@ -1,10 +1,6 @@
-name: "Tests of push & pull"
-
+name: "Tests of push & pull kvm"
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  workflow_dispatch
 
 env:
   FILENAME: README.md
@@ -12,7 +8,7 @@ env:
 jobs:
   tests:
     name: 'Validate README.md changes'
-    runs-on: ubuntu-latest
+    runs-on: kvm
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
