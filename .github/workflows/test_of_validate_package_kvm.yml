@@ -1,7 +1,8 @@
 name: "Tests of validate package kvm"
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+  
 
 jobs:
   unittest:
